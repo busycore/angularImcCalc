@@ -1,0 +1,6 @@
+<div class="historyIMCItem" [ngClass]="imc.imc >= 30 ? 'badImc' : 'goodImc'">
+  <span>Peso : {{ imc.peso }}</span>
+  <span>Altura : {{ imc.altura }}</span>
+  <span>IMC :{{ imc.imc.toFixed(2) }}</span>
+  <span><button (click)="deletarImc()">Deletar</button></span>
+</div>

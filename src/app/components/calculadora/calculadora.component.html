@@ -1,0 +1,38 @@
+<div class="contentBox" id="content">
+  <p>
+    Peso :
+    <input
+      type="text"
+      name="peso"
+      id="peso"
+      [(ngModel)]="peso"
+      (change)="calculateImc()"
+    />
+  </p>
+
+  <p>
+    Altura :
+    <input
+      type="text"
+      name="altura"
+      id="altura"
+      [(ngModel)]="altura"
+      (ngModelChange)="calculateImc()"
+    />
+  </p>
+
+  <p class="imcBadge" [ngClass]="imc >= 30 ? 'badImc' : 'goodImc'">
+    IMC : {{ imc.toFixed(2) }}
+  </p>
+
+  <button class="buttonLarge" (click)="adicionar()">Adicionar</button>
+</div>
+
+<div class="contentBox" id="list" *ngIf="listaImcs.length > 0">
+  <app-historyIMCItem
+    *ngFor="let imc of listaImcs"
+    [imc]="imc"
+    (solicitouDelecao)="deletarImc($event)"
+  >
+  </app-historyIMCItem>
+</div>

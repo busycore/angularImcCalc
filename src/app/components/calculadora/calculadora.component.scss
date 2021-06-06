@@ -1,0 +1,32 @@
+.contentBox{
+  background-color: rgb(238, 238, 238);
+  padding: 1rem;
+  width: 25rem;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+#list{
+  margin-top: 2em;
+}
+
+.imcBadge {
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+
+.goodImc{
+  background-color: rgb(90, 224, 108);
+}
+
+
+.badImc{
+  background-color: rgb(236, 73, 73);
+}
+
+
+.buttonLarge{
+  width: 100%;
+  color: #000;
+  font-weight: bolder;
+}
